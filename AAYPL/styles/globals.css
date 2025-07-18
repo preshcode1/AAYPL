@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom font imports (optional, for Inter/Open Sans via CDN or npm)
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Open+Sans:wght@400;700&display=swap');
+*/
+
+body {
+  @apply bg-[#F9FAFB] text-[#1A1A1A] font-sans;
+  font-family: 'Inter', 'Open Sans', Arial, sans-serif;
+}
+
+a {
+  @apply transition-colors;
+}
+
+.bg-gold-600 {
+  background-color: #D4AF37;
+}
+
+.bg-gold-700 {
+  background-color: #b89b32;
+}
+
+.text-gold-600 {
+  color: #D4AF37;
+}
+
+/* Custom button animations */
+button, .btn {
+  @apply transition-transform duration-150;
+}
+button:active, .btn:active {
+  transform: scale(0.98);
+}
+
+/* Remove focus outline for mouse, keep for keyboard */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Prose for blog content */
+.prose {
+  max-width: 100%;
+}
+
+/* Sticky nav support (already Tailwind, but reinforce for z-index) */
+.sticky {
+  z-index: 50;
+}
